@@ -37,4 +37,4 @@ git push -u origin master
 - 수정된 리모트 레파지토리 가져오기
 git pull origin
 
-
+- 수정된 
