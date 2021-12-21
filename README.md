@@ -3,8 +3,8 @@
 
 ### 깃 기본 명령어 정리
 - 환경설정
-git config --global user.name "comstudynews"
-git config --global user.email "comstudynews@gmail.com"
+git config --global user.name "nine03"
+git config --global user.email "yeongjun_10@naver.com"
 
 git config --global --list
 git config user.name
