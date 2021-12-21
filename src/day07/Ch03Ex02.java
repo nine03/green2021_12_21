@@ -3,8 +3,8 @@ package day07;
 public class Ch03Ex02 {
 
 	public static void main(String[] args) {
-		// »õ·Î Ãß°¡ÇÑ Å¬·¡½º ÆÄÀÏ 
-
+		// Â»ÃµÂ·Ã ÃƒÃŸÂ°Â¡Ã‡Ã‘ Ã…Â¬Â·Â¡Â½Âº Ã†Ã„Ã€Ã 
+ 
 	}
 
 }
