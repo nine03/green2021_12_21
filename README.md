@@ -1,38 +1,38 @@
-# green20211221
-그린 컴퓨터 아카데미 수업 실습용
+# green20211221 
+그린 컴퓨터 아카데미 수업 실습용 
 
-### 깃 기본 명령어 정리
-- 환경설정
-git config --global user.name "nine03"
-git config --global user.email "yeongjun_10@naver.com"
+### 깃 기본 명령어 정리 
+- 환경설정<br>
+git config --global user.name "comstudynews" <br>
+git config --global user.email "comstudynews@gmail.com" <br>
 
-git config --global --list
-git config user.name
-git config user.email
-
-
-- 초기화
-git init
-
-- 리모트 저장소 등록 (깃허브에 있다)
-git remote add origin https://github.com/계정/레파지토리.git
-
-- 스테이지에 추가 및 commit(저장소에 등록)
-git add --all
-git commit -m "메세지" 
-
-- 업로드
-git push -u origin master
+git config --global --list <br>
+git config user.name <br>
+git config user.email <br>
 
 
-- fetch(서버에가 임의 수정 되었을때)
-git fetch origin
-git checkout master
-git merge origin/master
---- 수정내용 직접 확인 후 ---
-git add --all
-git commit -m "메세지"
-git push -u origin master
+- 초기화 <br>
+git init <br>
 
-- 수정된 리모트 레파지토리 가져오기
-git pull origin
+- 리모트 저장소 등록 (깃허브에 있다) <br>
+git remote add origin https://github.com/계정/레파지토리.git <br>
+
+- 스테이지에 추가 및 commit(저장소에 등록) <br>
+git add --all <br>
+git commit -m "메세지" <br>
+
+- 업로드 <br>
+git push -u origin master <br>
+
+
+- fetch(서버에가 임의 수정 되었을때) <br>
+git fetch origin <br>
+git checkout master <br>
+git merge origin/master <br>
+--- 수정내용 직접 확인 후 --- <br>
+git add --all <br>
+git commit -m "메세지" <br>
+git push -u origin master <br>
+
+- 수정된 리모트 레파지토리 가져오기 <br>
+git pull origin <br>
