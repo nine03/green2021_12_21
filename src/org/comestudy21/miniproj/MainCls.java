@@ -40,9 +40,6 @@ class Student {
 		}else if(avg < 60 && avg >= 50) {
 			this.grade = "F";
 		}
-		
-		
-
 	}
 
 	// 객체를 사용하면 toString()이 자동 호출된다.
@@ -82,7 +79,7 @@ public class MainCls {
 		int no = 0;
 		
 		while(true) {
-		out.println("1.입력 2.출력 3.검색 4.수정 5.수정 6.종료");
+		out.println("1.입력 2.출력 3.검색 4.수정 5.삭제 6.종료");
 		out.print("선택 >>");
 		no = scan.nextInt();
 		// 예외처리 및 유효성 검사
@@ -146,30 +143,29 @@ public class MainCls {
 	
 	private static void modify() {
 		out.print("::::: MODIFY :::::\n");
-		// 이름으로 검색 후 수정
+		// 이름으로 검색 후 수정 
 		int count = 0;
-		out.print("검색할 이름을 입력하세요.");
+		System.out.print("검색할 이름을 입력하여주십시오 >> ");
 		String name = scan.next();
 		int i = 0;
-		for(i = 0; i < top; i++) {
-			if(name.equals(sArr[i].name)) {
-			count++;
-			break;
+			for(i=0; i<top; i++) {
+				if(name.equals(sArr[i].name)) {
+					Basic();
+					System.out.println(sArr[i]);
+					count++;
+					break;
+				} 
 			}
-		}
-		if(count == 1) {
-			out.println("그 이름의 데이터는 존재하지 않습니다.");
-		}else {
-			out.println("수정할 데이터를 입력하세요.");
-			int kor = 0;
-			int eng = 0;
-			int mat = 0;
-			
-			kor = score("국어");
-			eng = score("영어");
-			mat = score("수학");
-			sArr[i] = new Student(sArr[i].no,name,kor,eng,mat);
-		}
+			if(count == 0) {
+				System.out.println("그 이름의 데이터는 존재하지 않습니다.");
+			} else {
+				System.out.println("수정할 데이터를 입력해주십시오.");
+				int kor =0, eng=0, mat = 0;
+				kor = score("국어");
+				eng = score("영어");
+				mat = score("수학");
+				sArr[i] = new Student(sArr[i].no,name, kor,eng,mat);
+				}
 	}
 	
 	private static void search() {
@@ -212,10 +208,6 @@ public class MainCls {
 				}
 		}
 		
-//		for(int i = 0; i < sArr.length; i++) {
-//			if(sArr[i] == null) break;
-//			sArr[i].sum = i + 1;
-//		}
 		
 		for(int i = 0; i < sArr.length; i++) {
 			if(sArr[i] == null) break;
