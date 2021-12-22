@@ -39,6 +39,8 @@ class Student {
 			this.grade ="D";
 		}else if(avg < 60 && avg >= 50) {
 			this.grade = "F";
+		}else if(avg < 50 && avg >= 10) {
+			this.grade = "F";
 		}
 	}
 
