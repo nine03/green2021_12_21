@@ -129,7 +129,7 @@ public class MainClsver1 {
 		out.print("::::: DELETE :::::\n");
 		// 이름으로 검색 후 삭제
 		int count = 0;
-		out.print("검색할 이름을 입력해주세요.");
+		out.print("검색할 이름을 입력해주세요 >>");
 		String name = scan.next();
 		int i = 0;
 		for (i = 0; i < top; i++) {
@@ -185,7 +185,7 @@ public class MainClsver1 {
 		out.print("::::: SEARCH :::::\n");
 		// 이름으로 검색
 		int count = 0;
-		out.print("검색할 이름을 입력하세요.");
+		out.print("검색할 이름을 입력하세요 >>");
 		String name = scan.next();
 
 		for (int i = 0; i < top; i++) {
