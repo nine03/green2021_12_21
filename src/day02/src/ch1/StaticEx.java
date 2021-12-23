@@ -1,5 +1,5 @@
 package ch1;
-//9¹ø
+//9ë²ˆ
 class ArrayUtil {
 	   public static int[] concat(int[] a, int[] b) {
 	      int tmp[] = new int[a.length+b.length];
