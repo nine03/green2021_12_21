@@ -10,16 +10,17 @@ class TV {
 	      this.inch = inch;
 	   }
 	   public void show() {
-	      System.out.println(brand+"¿¡¼­ ¸¸µç "+year+"³âÇü "+inch+"ÀÎÄ¡ TV");
+	      System.out.println(brand+"ì—ì„œ ë§Œë“  "+year+"ë…„í˜• "+inch+"ì¸ì¹˜ TV");
 	   }
-	}
+}
 
-public class ÀÏ {
+public class ì¼{
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 TV myTV = new TV("LG", 2017, 32);
+	      // TODO Auto-generated method stub
+	      TV myTV = new TV("LG", 2017, 32);
 	      myTV.show();
+	   }
+
 	}
 
-}
