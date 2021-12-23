@@ -4,7 +4,7 @@ public class Ch03Ex21 {
 
 	public static void main(String[] args) {
 		
-		//�ʱ�ȭ
+		//초기화
 		int[] arr = {10,30,40,90,120,50};
 		
 		for(int number: arr) {
