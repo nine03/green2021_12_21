@@ -10,7 +10,7 @@ public class Day11Ex8 {
 		int arr[];
 		int n ;
 		
-		System.out.print("Á¤¼ö ¸î°³?");
+		System.out.print("ì •ìˆ˜ ëª‡ê°œ?");
 			n = sc.nextInt();
 		
 		 arr = new int[n];
