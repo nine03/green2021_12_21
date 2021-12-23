@@ -1,7 +1,7 @@
 package day13;
 
 public class test2 {
-	//±¸±¸´Ü °¡·Î·Î Ãâ·Â 
+	//êµ¬êµ¬ë‹¨ ê°€ë¡œë¡œ ì¶œë ¥ 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		for(int i = 2; i < 10; i++) {
