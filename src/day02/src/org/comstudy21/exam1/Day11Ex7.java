@@ -13,10 +13,10 @@ public class Day11Ex7 {
 		int sum = 0;
 		for(int a = 0; a < n.length; a++)
 			sum += n[a];
-		System.out.print("·£´ýÇÑ Á¤¼öµé : ");
+		System.out.print("ëžœë¤í•œ ì •ìˆ˜ë“¤ : ");
 		for(int a = 0; a < n.length; a++)
 			System.out.print(n[a] + " ");
-		System.out.println("\nÆò±ÕÀº " + (double)sum / n.length);
+		System.out.println("\ní‰ê· ì€ " + (double)sum / n.length);
 	}
 
 }
