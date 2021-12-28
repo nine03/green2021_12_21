@@ -1,6 +1,9 @@
 package org.comstudy21.notice.model;
 
 import java.util.Arrays;
+import java.time.LocalDateTime;  // Import the LocalDateTime class
+import java.time.format.DateTimeFormatter;  // Import the DateTimeFormatter class
+
 
 public class NoticeDao {
 	public static final int MAX = 100;
@@ -8,10 +11,16 @@ public class NoticeDao {
 	private static int top = 0;
 	private static int noticeSeq = 1;
 	
+	
 	static {
-		noticeArr[top++] = new NoticeVo(noticeSeq++,"KIM","안녕하세요","2021-12-28 15:47:31");
-		noticeArr[top++] = new NoticeVo(noticeSeq++,"LEE","안녕","2021-12-28 15:48:31");
-		noticeArr[top++] = new NoticeVo(noticeSeq++,"PARK","이름이뭐예요","2021-12-28 15:49:31");
+		LocalDateTime myDateObj = LocalDateTime.now();  
+	    //System.out.println("Before formatting: " + myDateObj);  
+	    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("yyyy-dd-MM HH:mm:ss");  
+	    
+	    String formattedDate = myDateObj.format(myFormatObj);
+		noticeArr[top++] = new NoticeVo(noticeSeq++,"KIM","안녕하세요",formattedDate);
+		noticeArr[top++] = new NoticeVo(noticeSeq++,"LEE","안녕",formattedDate);
+		noticeArr[top++] = new NoticeVo(noticeSeq++,"PARK","이름이뭐예요",formattedDate);
 	}
 	
 	
