@@ -7,7 +7,7 @@ public class Receipt {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("원하시는 음료가 몇개인가요? : ");
+		System.out.println("원하시는 음료가 몇잔인가요? : ");
 		
 		Menu[] menus = new Menu[sc.nextInt()];
 		
