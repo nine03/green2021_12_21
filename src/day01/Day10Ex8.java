@@ -8,7 +8,7 @@ public class Day10Ex8 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		out.println("µÎ Á¡ (x1,y1), (x2,y2)ÀÇ ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ½Ã¿À >>"); 
+		out.println("ë‘ ì  (x1,y1), (x2,y2)ì˜ ì¢Œí‘œë¥¼ ì…ë ¥í•˜ì‹œì˜¤ >>"); 
 		Scanner sc = new Scanner(System.in); 
 		int x1 = sc.nextInt(); 
 		int y1 = sc.nextInt(); 
@@ -16,16 +16,16 @@ public class Day10Ex8 {
 		int y2 = sc.nextInt(); 
 		if ((x1>=100 & x1<=200) && (y1>=100 && y1<=200)) 
 		{ 
-			out.println("»ç°¢ÇüÀÌ °ãÄ§"); 
+			out.println("ì‚¬ê°í˜•ì´ ê²¹ì¹¨"); 
 			}
 		else if((x2>=100 && x2<200) && (y2>=100 && y2<=200)) 
 		{ 
-			out.println("»ç°¢ÇüÀÌ °ãÄ§"); 
+			out.println("ì‚¬ê°í˜•ì´ ê²¹ì¹¨"); 
 			}else if(x1<=100 && x2>=200 && y1<=100 && y2>=200) 
 			{ 
-				out.println("»ç°¢ÇüÀÌ °ãÄ§"); 
+				out.println("ì‚¬ê°í˜•ì´ ê²¹ì¹¨"); 
 				} else 
-					out.println("»ç°¢ÇüÀÌ ¾È°ãÄ§"); 
+					out.println("ì‚¬ê°í˜•ì´ ì•ˆê²¹ì¹¨"); 
 		sc.close();
 	}
 
