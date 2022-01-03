@@ -8,7 +8,7 @@ public class Day10Ex12x2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in); 
-		out.print("¿¬»ê>>"); 
+		out.print("ì—°ì‚°>>"); 
 		int op1 = sc.nextInt(); 
 		String op = sc.next(); 
 		int op2 = sc.nextInt(); 
@@ -25,17 +25,17 @@ public class Day10Ex12x2 {
 					case "/": 
 						if(op2 == 0) 
 						{ 
-							out.print("0À¸·Î ³ª´­¼ö¾ø´Ù"); 
+							out.print("0ìœ¼ë¡œ ë‚˜ëˆŒìˆ˜ì—†ë‹¤"); 
 							sc.close(); 
 							}
 							res = op1 / op2; 
 							break; 
 							default: 
-								out.print("»çÄ¢¿¬»êÀÌ¾Æ´Õ´Ï´Ù."); 
+								out.print("ì‚¬ì¹™ì—°ì‚°ì´ì•„ë‹™ë‹ˆë‹¤."); 
 								sc.close(); 
 								break; 
 								} 
-		out.print(op1 + op + op2 + "ÀÇ °è»ê°á°ú´Â" + res); 
+		out.print(op1 + op + op2 + "ì˜ ê³„ì‚°ê²°ê³¼ëŠ”" + res); 
 		sc.close();
 
 	}
