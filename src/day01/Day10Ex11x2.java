@@ -7,7 +7,7 @@ public class Day10Ex11x2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.println("´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä(1~12)>>"); 
+		out.println("ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš”(1~12)>>"); 
 		Scanner m = new Scanner(System.in); 
 		int num = m.nextInt(); 
 		switch(num) 
@@ -15,25 +15,25 @@ public class Day10Ex11x2 {
 		case 3: 
 		case 4: 
 		case 5: 
-				out.println("º½"); 
+				out.println("ë´„"); 
 				break; 
 					case 6: 
 					case 7: 
 					case 8: 
-							out.println("¿©¸§"); 
+							out.println("ì—¬ë¦„"); 
 							break; 
 								case 9: 
 								case 10: 
 								case 11: 
-									out.println("°¡À»"); 
+									out.println("ê°€ì„"); 
 									break; 
 										case 12: 
 										case 1: 
 										case 2: 
-											out.println("°Ü¿ï"); 
+											out.println("ê²¨ìš¸"); 
 											break; 
 											default: 
-												out.println("Àß¸øÀÔ·Â"); 
+												out.println("ì˜ëª»ì…ë ¥"); 
 															} 
 		m.close();
 	}
