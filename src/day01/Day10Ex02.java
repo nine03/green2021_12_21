@@ -7,41 +7,41 @@ public class Day10Ex02 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		out.println("°¡À§¹ÙÀ§º¸ °ÔÀÓÀÔ´Ï´Ù. °¡À§, ¹ÙÀ§, º¸ Áß¿¡¼­ ÀÔ·ÂÇÏ¼¼¿ä");
+		out.println("ê°€ìœ„ë°”ìœ„ë³´ ê²Œì„ì…ë‹ˆë‹¤. ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ì—ì„œ ì…ë ¥í•˜ì„¸ìš”");
 		
-		out.print("Ã¶¼ö >> ");
+		out.print("ì² ìˆ˜ >> ");
 		String y1 = sc.next();
 		
-		out.print("¿µÈñ >> ");
+		out.print("ì˜í¬ >> ");
 		String y2 = sc.next();
 		
 		int win;
 		if(y1.equals(y2))
 			win = 0;
-		else if(y1.equals("°¡À§")) {
-			if(y2.equals("º¸"))
+		else if(y1.equals("ê°€ìœ„")) {
+			if(y2.equals("ë³´"))
 				win = 1;
 			else 
 				win = 2;
 		}
-		else if(y1.equals("¹ÙÀ§")) {
-			if(y2.equals("°¡À§"))
+		else if(y1.equals("ë°”ìœ„")) {
+			if(y2.equals("ê°€ìœ„"))
 				win = 1;
 			else 
 				win = 2;
 		}
 		else {
-			if(y2.equals("¹ÙÀ§"))
+			if(y2.equals("ë°”ìœ„"))
 				win = 1;
 			else
 				win = 2;
 		}
 		if(win == 1)
-			out.print("Ã¶¼ö°¡ ÀÌ°å½À´Ï´Ù.");
+			out.print("ì² ìˆ˜ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		else if(win == 2)
-			out.print("¿µÈñ°¡ ÀÌ°å½À´Ï´Ù.");
+			out.print("ì˜í¬ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.");
 		else 
-			out.print("ºñ°å½À´Ï´Ù.");
+			out.print("ë¹„ê²¼ìŠµë‹ˆë‹¤.");
 		sc.close();
 	}
 
