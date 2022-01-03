@@ -6,7 +6,7 @@ import static java.lang.System.out;
 
 public class Day10Ex01 {
 	static Scanner scan = new Scanner(System.in);
-	//ÀÎ½ºÅÏ½º ¸â¹ö±â ¶§¹®¿¡ Á¢±Ù¸øÇÑ´Ù 
+	//ì¸ìŠ¤í„´ìŠ¤ ë©¤ë²„ê¸° ë•Œë¬¸ì— ì ‘ê·¼ëª»í•œë‹¤ 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int money = 0;
@@ -14,22 +14,22 @@ public class Day10Ex01 {
 		int [] arr = {5000,1000,500,100,50,10};
 		
 		//int a;
-		out.printf("¹°°Ç °ªÀÌ %d¿øÀÔ´Ï´Ù. \n", 240);
-		out.print("Çö±İÀÔ·Â : ");
+		out.printf("ë¬¼ê±´ ê°’ì´ %dì›ì…ë‹ˆë‹¤. \n", 240);
+		out.print("í˜„ê¸ˆì…ë ¥ : ");
 		money = scan.nextInt();
-		// ´ÙÀ½°ú °°ÀÌ Ãâ·ÂµÇµµ·Ï ±¸Çö ÇÏ¼¼¿ä.(¹İº¹¹® »ç¿ë °¡´É)
-		// 10000¸¸¿øÀ» ÀÔ·Â ¹Ş¾Ò´Ù¸é 
-		// 5000¿ø±Ç 1°³
-		// 1000¿ø±Ç 4°³
-		// 500¿ø±Ç 1°³
-		// 100¿ø±Ç 2°³
-		// 50¿ø±Ç 1°³
-		// 10¿ø±Ç 1°³
+		// ë‹¤ìŒê³¼ ê°™ì´ ì¶œë ¥ë˜ë„ë¡ êµ¬í˜„ í•˜ì„¸ìš”.(ë°˜ë³µë¬¸ ì‚¬ìš© ê°€ëŠ¥)
+		// 10000ë§Œì›ì„ ì…ë ¥ ë°›ì•˜ë‹¤ë©´ 
+		// 5000ì›ê¶Œ 1ê°œ
+		// 1000ì›ê¶Œ 4ê°œ
+		// 500ì›ê¶Œ 1ê°œ
+		// 100ì›ê¶Œ 2ê°œ
+		// 50ì›ê¶Œ 1ê°œ
+		// 10ì›ê¶Œ 1ê°œ
 		//a = money - price;
 		//if(a >= 0) {
-			//out.print("ÀÜ¾× : " + a + "¿ø");
+			//out.print("ì”ì•¡ : " + a + "ì›");
 		//}else {
-			//out.print("ÀÜ¾× ºÎÁ· \n ³²¾ÆÀÖ´Â ÀÜ¾×Àº :" + a + "¿øÀÔ´Ï´Ù.");
+			//out.print("ì”ì•¡ ë¶€ì¡± \n ë‚¨ì•„ìˆëŠ” ì”ì•¡ì€ :" + a + "ì›ì…ë‹ˆë‹¤.");
 		//}
 		
 		//int t = money / 2;
@@ -41,28 +41,28 @@ public class Day10Ex01 {
 		//int t6 = t5 / 10;
  		
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t + "¿ø" );
+		//out.print("ì”ì•¡ : " + t + "ì›" );
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t1 + "¿ø");
+		//out.print("ì”ì•¡ : " + t1 + "ì›");
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t2 + "¿ø");
+		//out.print("ì”ì•¡ : " + t2 + "ì›");
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t3 + "¿ø");
+		//out.print("ì”ì•¡ : " + t3 + "ì›");
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t4 + "¿ø");
+		//out.print("ì”ì•¡ : " + t4 + "ì›");
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t5 + "¿ø");
+		//out.print("ì”ì•¡ : " + t5 + "ì›");
 		//out.print("\n");
-		//out.print("ÀÜ¾× : " + t6 + "¿ø");
+		//out.print("ì”ì•¡ : " + t6 + "ì›");
 		//out.print("\n");
 		
 		int m = (money - price);
 		for(int i = 0; i < arr.length; i++) {
 			int num = m / arr[i];
 				m = m % arr[i];
-				out.print(arr[i] + "¿ø±Ç ");
+				out.print(arr[i] + "ì›ê¶Œ ");
 				arr[i] = num;
-				out.print(arr[i] + "°³ ");
+				out.print(arr[i] + "ê°œ ");
 				out.print("\n");
 		}
 
