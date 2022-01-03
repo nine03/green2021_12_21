@@ -7,19 +7,19 @@ public class Day10Ex11x1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.println("´ŞÀ» ÀÔ·ÂÇÏ¼¼¿ä(1~12)>>"); 
+		out.println("ë‹¬ì„ ì…ë ¥í•˜ì„¸ìš”(1~12)>>"); 
 		Scanner m = new Scanner(System.in); 
 		int num = m.nextInt(); 
 		if (num >= 3 && num <= 5) 
-			out.println("º½"); 
+			out.println("ë´„"); 
 		else if(num >= 6 && num <= 8) 
-			out.println("¿©¸§"); 
+			out.println("ì—¬ë¦„"); 
 		else if(num >= 9 && num <= 11) 
-			out.println("°¡À»"); 
+			out.println("ê°€ì„"); 
 		else if(num == 12 || num == 1 || num == 2) 
-			out.println("°Ü¿ï"); 
+			out.println("ê²¨ìš¸"); 
 		else 
-			out.println("Àß¸øµÈ ¸¸³²ÀÌ ¾Æ´Ï°í ÀÔ·Â"); 
+			out.println("ì˜ëª»ëœ ë§Œë‚¨ì´ ì•„ë‹ˆê³  ì…ë ¥"); 
 		m.close();
 
 	}
