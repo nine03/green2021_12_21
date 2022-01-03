@@ -7,21 +7,21 @@ public class Day10Ex10 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.println("Ã¹ ¹øÂ° ¿øÀÇ Áß½É°ú ¹ÝÁö¸§ ÀÔ·Â>>"); 
+		out.println("ì²« ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ìž…ë ¥>>"); 
 		Scanner sc = new Scanner(System.in); 
 		int x = sc.nextInt(); 
 		int x1 = sc.nextInt(); 
 		double r = sc.nextDouble(); 
-		out.println("µÎ ¹øÂ° ¿øÀÇ Áß½É°ú ¹ÝÁö¸§ ÀÔ·Â>>"); 
+		out.println("ë‘ ë²ˆì§¸ ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ìž…ë ¥>>"); 
 		int y = sc.nextInt(); 
 		int y1 = sc.nextInt(); 
 		double r1 = sc.nextDouble(); 
 		double distance = 0; 
 		distance = Math.sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1)); 
 		if (distance <= r + r1) 
-			out.println("µÎ ¿øÀº ¼­·Î °ãÄ£´Ù."); 
+			out.println("ë‘ ì›ì€ ì„œë¡œ ê²¹ì¹œë‹¤."); 
 		else 
-			out.println("µÎ ¿øÀº ¼­·Î ¾È°ãÄ£´Ù."); 
+			out.println("ë‘ ì›ì€ ì„œë¡œ ì•ˆê²¹ì¹œë‹¤."); 
 		sc.close();
 	}
 
