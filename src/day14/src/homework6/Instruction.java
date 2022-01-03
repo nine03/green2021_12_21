@@ -1,7 +1,7 @@
 package homework6;
 
 import java.util.StringTokenizer;
-
+// 13번 문제
 public class Instruction {
 	private String line;
 	private String opcode;
