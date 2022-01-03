@@ -3,7 +3,7 @@ package homework7;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Vector;
-
+//  open challenge
 class Word {
 	private String english;
 	private String korean;
