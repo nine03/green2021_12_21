@@ -9,18 +9,18 @@ public class Day10Ex4 {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in); 
 		int a,b,c; 
-		out.println("Á¤¼ö 3°³ ÀÔ·Â >>"); 
+		out.println("ì •ìˆ˜ 3ê°œ ìž…ë ¥ >>"); 
 		a = sc.nextInt(); 
 		b = sc.nextInt(); 
 		c = sc.nextInt(); 
 		if(a<b && b<c) 
 		{
-			out.print("Áß°£ °ªÀº "+ b + " ÀÔ´Ï´Ù.");
+			out.print("ì¤‘ê°„ ê°’ì€ "+ b + " ìž…ë‹ˆë‹¤.");
 			} if(b<a && a<c) {
-				System.out.print("Áß°£ °ªÀº " + a + " ÀÔ´Ï´Ù.");
+				System.out.print("ì¤‘ê°„ ê°’ì€ " + a + " ìž…ë‹ˆë‹¤.");
 				} 
 		else {
-			out.print("Áß°£ °ªÀº " + c + " ÀÔ´Ï´Ù.");
+			out.print("ì¤‘ê°„ ê°’ì€ " + c + " ìž…ë‹ˆë‹¤.");
 			} 
 			sc.close();
 	}
