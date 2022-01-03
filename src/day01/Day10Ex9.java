@@ -7,19 +7,19 @@ public class Day10Ex9 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.println("¿øÀÇ Áß½É°ú ¹ÝÁö¸§ ÀÔ·Â>>"); 
+		out.println("ì›ì˜ ì¤‘ì‹¬ê³¼ ë°˜ì§€ë¦„ ìž…ë ¥>>"); 
 		Scanner sc = new Scanner(System.in); 
 		double p1 = sc.nextDouble(); 
 		double p2 = sc.nextDouble(); 
 		double r = sc.nextDouble(); 
-		out.println("Á¡ ÀÔ·Â>>"); 
+		out.println("ì  ìž…ë ¥>>"); 
 		double x = sc.nextDouble(); 
 		double y = sc.nextDouble(); 
 		double distance = Math.sqrt((x - p1) * (x - p1) + (y - p2) * (y - p2)); 
 		if(distance < r) 
-			out.println("Á¡ " + "(" + x + " , " + y + ")" + "´Â " + "¿ø ¾È¿¡ ÀÖ½À´Ï´Ù."); 
+			out.println("ì  " + "(" + x + " , " + y + ")" + "ëŠ” " + "ì› ì•ˆì— ìžˆìŠµë‹ˆë‹¤."); 
 			else 
-				out.println("Á¡ "+ "(" + x + " , " + y + ")" + "´Â " + "¿ø ¹Û¿¡ ÀÖ½À´Ï´Ù."); 
+				out.println("ì  "+ "(" + x + " , " + y + ")" + "ëŠ” " + "ì› ë°–ì— ìžˆìŠµë‹ˆë‹¤."); 
 		sc.close();
 	}
 
