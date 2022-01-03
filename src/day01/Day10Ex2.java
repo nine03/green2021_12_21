@@ -8,12 +8,12 @@ public class Day10Ex2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		out.println("2ÀÚ¸®ÀÇ Á¤¼ö ÀÔ·Â(10 ~ 99)>>");
+		out.println("2ìë¦¬ì˜ ì •ìˆ˜ ì…ë ¥(10 ~ 99)>>");
 		int num = sc.nextInt();
 		if(num / 10 == num % 10) {
-			out.println("Yes! 10ÀÇÀÚ¸®¿Í 1ÀÇ ÀÚ¸®°¡ °°½À´Ï´Ù.");
+			out.println("Yes! 10ì˜ìë¦¬ì™€ 1ì˜ ìë¦¬ê°€ ê°™ìŠµë‹ˆë‹¤.");
 		}else {
-			out.println("No! 10ÀÇ ÀÚ¸®¿Í 1ÀÇ ÀÚ¸®°¡ ´Ù¸¨´Ï´Ù.");
+			out.println("No! 10ì˜ ìë¦¬ì™€ 1ì˜ ìë¦¬ê°€ ë‹¤ë¦…ë‹ˆë‹¤.");
 		}
 		sc.close();
 	}
