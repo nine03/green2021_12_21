@@ -8,13 +8,13 @@ public class Day10Ex5 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in); 
-		out.println("Á¤¼ö 3°³¸¦ ÀÔ·ÂÇÏ½Ã¿À>>"); 
+		out.println("ì •ìˆ˜ 3ê°œë¥¼ ìž…ë ¥í•˜ì‹œì˜¤>>"); 
 		int l1 = sc.nextInt(); 
 		int l2 = sc.nextInt(); 
 		int l3 = sc.nextInt(); 
 		if((l1+l2)<l3 || (l1+l3)<l2 || (l2+l3)<l1) 
-			out.println("»ï°¢ÇüÀ» ¸¸µé ¼ö ¾ø½À´Ï´Ù."); 
-		else out.println("»ï°¢ÇüÀÌ µË´Ï´Ù."); 
+			out.println("ì‚¼ê°í˜•ì„ ë§Œë“¤ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); 
+		else out.println("ì‚¼ê°í˜•ì´ ë©ë‹ˆë‹¤."); 
 		sc.close();
 
 	}
