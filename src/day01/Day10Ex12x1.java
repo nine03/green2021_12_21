@@ -7,7 +7,7 @@ public class Day10Ex12x1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.print("¿¬»ê>>"); 
+		out.print("ì—°ì‚°>>"); 
 		Scanner sc = new Scanner(System.in); 
 		int op1 = sc.nextInt(); 
 		String op = sc.next(); 
@@ -23,17 +23,17 @@ public class Day10Ex12x1 {
 		{ 
 			if(op2 == 0) 
 			{ 
-				out.print("0À¸·Î ³ª´­ ¼ö ¾ø½À´Ï´Ù."); 
+				out.print("0ìœ¼ë¡œ ë‚˜ëˆŒ ìˆ˜ ì—†ìŠµë‹ˆë‹¤."); 
 				sc.close(); 
 				return; 
 				} 
 			else res = op1 / op2; 
 			} else { 
-				out.print("»çÄ¢¿¬»êÀÌ ¾Æ´Õ´Ï´Ù."); 
+				out.print("ì‚¬ì¹™ì—°ì‚°ì´ ì•„ë‹™ë‹ˆë‹¤."); 
 				sc.close(); 
 				return; 
 				} 
-		out.println(op1 + op + op2+"ÀÇ °è»ê°á°ú´Â "+res); 
+		out.println(op1 + op + op2+"ì˜ ê³„ì‚°ê²°ê³¼ëŠ” "+res); 
 		sc.close();
 	}
 
