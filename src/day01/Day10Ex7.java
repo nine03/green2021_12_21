@@ -7,14 +7,14 @@ public class Day10Ex7 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		out.println("Á¡ (x,y)ÀÇ ÁÂÇ¥¸¦ ÀÔ·ÂÇÏ½Ã¿À >>"); 
+		out.println("ì  (x,y)ì˜ ì¢Œí‘œë¥¼ ìž…ë ¥í•˜ì‹œì˜¤ >>"); 
 		Scanner sc = new Scanner(System.in); 
 		int x = sc.nextInt(); 
 		int y = sc.nextInt(); 
 		if((100<=x && x<=200)&&(100<=y && y<=200)) 
-			out.println("(" + x + "," + y + ")" + "»ç°¢Çü ¾È¿¡ Á¡ÀÌ ÀÖ½À´Ï´Ù."); 
+			out.println("(" + x + "," + y + ")" + "ì‚¬ê°í˜• ì•ˆì— ì ì´ ìžˆìŠµë‹ˆë‹¤."); 
 		else
-			out.println("(" + x + "," + y + ")" + "»ç°¢Çü ¾È¿¡ Á¡ÀÌ ¾ø½À´Ï´Ù."); 
+			out.println("(" + x + "," + y + ")" + "ì‚¬ê°í˜• ì•ˆì— ì ì´ ì—†ìŠµë‹ˆë‹¤."); 
 		sc.close();
 	}
 
