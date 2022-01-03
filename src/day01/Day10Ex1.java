@@ -8,10 +8,10 @@ public class Day10Ex1 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
-		out.println("¿øÈ­¸¦ ÀÔ·ÂÇÏ¼¼¿ä(´ÜÀ§ : ¿ø)>>");
+		out.println("ì›í™”ë¥¼ ì…ë ¥í•˜ì„¸ìš”(ë‹¨ìœ„ : ì›)>>");
 		int num = sc.nextInt();
 		double dollar = num / 1100;
-		out.println(num + "¿øÀº $" + dollar + "ÀÔ´Ï´Ù.");
+		out.println(num + "ì›ì€ $" + dollar + "ì…ë‹ˆë‹¤.");
 		sc.close();
 	}
 
