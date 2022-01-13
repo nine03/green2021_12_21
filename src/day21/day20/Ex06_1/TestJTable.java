@@ -1,12 +1,18 @@
 package day20.Ex06_1;
 
 import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Vector;
 
+import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -20,6 +26,7 @@ import static day20.Ex06_1.R.*;
 
 
 public class TestJTable extends MyJFrame {
+	
 	
 	public TestJTable() { 
 		super("",640,480);
@@ -49,6 +56,7 @@ public class TestJTable extends MyJFrame {
 		table = new JTable(tbModel);
 		scrollPane = new JScrollPane(table);  
 		contentPan.add(scrollPane);
+		
 	}
 
 	private void addRowDataTest() {
@@ -196,7 +204,9 @@ public class TestJTable extends MyJFrame {
 			}
 		});
 	}
-		
+	
+
+	
 	public static void main(String[] args) {
 		new TestJTable().setVisible(true);
 	}
