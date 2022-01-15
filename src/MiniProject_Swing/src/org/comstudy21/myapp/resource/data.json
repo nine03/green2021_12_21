@@ -1,0 +1,29 @@
+{
+  "member": [
+    {
+      "no": 1,
+      "phone": "010-0000-0000",
+      "name": "test",
+      "email": "test@test.com"
+    },
+    {
+      "no": 2,
+      "phone": "010-1111-1111",
+      "name": "kim",
+      "email": "kim@k.com"
+    },
+    {
+      "no": 3,
+      "phone": "010-1111-1112",
+      "name": "kim2",
+      "email": "kim2@k.com"
+    },
+    {
+      "no": 4,
+      "phone": "aa",
+      "name": "aa",
+      "email": "aa"
+    }
+  ],
+  "seq": 5
+}
