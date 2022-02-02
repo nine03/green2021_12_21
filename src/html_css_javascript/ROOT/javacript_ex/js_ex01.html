@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+<script>
+// 자바스크립트 한줄 주석
+/*
+ * 자바스크립트 
+ * 여러 행 주석
+ */
+ /*
+ - 변수 선언 방법
+ - 변수를 선언 할때 타입을 지정하지 않은.
+ - 변수에 저장되는 값의 타입에 따라서 변수의 타입 결정된다.
+ var 변수명 = 초기값;
+ 
+ - 변수의 타입 : boolean, String, Number, Nan(not a number), null, undefined
+ */
+ 
+var name = "홍길동";
+console.log("name" + name); // 개발자 도구의 console 탭에 출력된다
+document.write("성명=> " + name); // 브라우저 화면에 출력된다.
+ 
+console.log(name, typeof name); // 홍길동 , string System.out이랑 비슷하다.;
+ 
+var num = 200;
+console.log(num, typeof num); // 200 ,number
+// 타입에 상관없이 변수를 선언하고 사용 가능하다.
+// let과 var의 차이
+// var는 함수단위의 범위를 가진다. let은 블럭단위로 범위를 가진다.
+// var를 이용하면 같은 이름으로 변수 선언 가능.
+// let은 범위 내에서 유일한 식별자만 가지게 된다.
+
+var name = "김";
+var name = "홍";
+console.log(name);
+
+let age = 20;
+//let age = 30;
+</script>
+
+</body>
+</html>

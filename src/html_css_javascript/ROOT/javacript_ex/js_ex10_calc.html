@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+a항 : <input type="text" size="3" name="a" value="5"/><br/>
+b항 : <input type="text" size="3" name="b" value="3"/><br/>
+연산자 : <input type="text" size="3" name="oper" value="*"/><br/>
+<button id="resultBtn">결과확인</button>
+<div class="result">결과 : </div>
+
+
+<script>
+var aInput = document.querySelector("input[name=a]"); // 속성안에 있는거 검색 
+var bInput = document.querySelector("input[name=b]");
+var operInput = document.querySelector("input[name=oper]");
+// var result = document.querySelector("input[name=result]");
+
+
+// 모르면 console.dir(); 찾아봐라 
+// 1. DOM을 생성
+// 2. 이벤트 핸들러 추가
+// 3. 버튼을 클릭하면 계산기
+// console.dir(document);
+var resultBtn = document.getElementById("resultBtn"); // 버튼에 있는 id값 dom으로 값을 가져온다 
+var resultDiv = document.getElementsByClassName("result")[0];
+console.dir(resultBtn);
+resultBtn.onclick = function() { // dom.이벤트 = 객체 익명함수 
+	// console.log("버튼 눌렀다!");
+	// console.log(a.value,b.value,oper.value);
+	// parseInt 파싱을 먼저 시켜줘야한다 
+	// var a = aInput.value; // 이렇게 만들면 String이다 
+	// var b = bInput.value;
+	var a = parseInt(aInput.value);
+	var b = parseInt(bInput.value)
+	var oper = operInput.value;
+	// console.log(a,b,oper);
+	// console.log(oper);
+	var result = 0 ;
+	
+	switch(oper) { // 더하기 안됨 
+	case "+" : result = a + b; break;
+	case "-" : result = a - b; break;
+	case "*" : result = a * b; break;
+	case "/" : result = a / b; break;
+	}
+	// console.log(result);
+	resultDiv.innerHTML = `결과 :${a}${oper}${b}=${result}`;
+}
+// innerhtml append인어 innerText
+//resultBtn.oncli
+
+/*
+var result1 = parseInt(a.value) + parseInt(b.value);
+var result2 = parseInt(a.value) - parseInt(b.value);
+var result3 = parseInt(a.value) * parseInt(b.value);
+var result4 = parseInt(a.value) / parseInt(b.value);
+console.log(oper.value);
+
+switch (oper.value){ // 문자로 받는다 
+case "+": result.value = result1; break;
+case "-": result.value = result2; break;
+case "*": result.value = result3; break;
+case "/": result.value = result4; break;
+} */
+
+</script>
+
+</body>
+</html>
+

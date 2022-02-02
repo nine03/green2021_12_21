@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<ul id="list">
+<li>오징어 게임</li>
+<li>빽투더 퓨처</li>
+<li>기생충</li>
+</ul>
+
+<script>
+var lis = document.getElementsByTagName("li");
+var ul = lis[0].parentElement;
+// console.log(lis[1].innerText);
+// console.dir(lis);
+
+ var newLi = document.createElement("li");
+// newLi.innerText = "갈매기 식당";
+newLi.innerHTML = "갈매기 식당";
+ul.appendChild(newLi); 
+
+
+var colors = ['orange','red','yellow','blue','green'];
+// var ul = document.querySelector("ul"); // 태그이름 쓰고 list로 접근해도된다.
+ var ul = document.querySelector("#list");
+
+/* var ul = document.querySelector("#list");
+ul.innerHTML = ""; // 기준에있는 데이터 지워줌 데이터 안지워주면 계속 데이터가 추가된다.
+for(var i=0; i<colors.length; i++) {
+	var newEl = document.createElement("li");
+	newEl.innerText = colors[i];
+	ul.appendChild(newEl);
+} */
+
+// var htmlStr="";
+ul.innerHTML="";
+for(var i=0; i<colors.length; i++){
+	ul.innerHTML += "<li>" + colors[i] + "</li>";
+}
+
+var lis = document.querySelectorAll("li"); // 전부다 가져온다.
+for(var i=0; i<lis.length;i++) {
+	lis[i].style.backgroundColor = colors[i];
+}
+
+</script>
+</body>
+</html>

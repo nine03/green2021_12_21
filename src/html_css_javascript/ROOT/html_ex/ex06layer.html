@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div {
+	border:5px solid black;
+	width:300px;
+	height:300px;
+}
+div:nth-child(1){
+	background-color:yellow;
+}
+div:nth-child(2){
+	background-color:pink;
+}
+#box1 {
+	/* css의 주석 : 레이어로 만들기 position 속성 필수*/
+	position: absolute;
+	left:150px;
+	top:150px;
+	z-index:1;
+}
+#box2 {
+	/* css의 주석 : 레이어로 만들기 position 속성 필수*/
+	position: absolute;
+	left:250px;
+	top:250px;
+	z-index:0;
+}
+.box {
+	background-image: url(images/img01.jpg);
+}
+</style>
+</head>
+<body>
+
+<div id="box1" class="box">box1</div>
+<div id="box2" class="box">box2</div>
+
+</body>
+</html>

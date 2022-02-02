@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+let cnt = 0;
+while(true) {
+	if(cnt>=6) break;
+	let num = Math.floor(1 + Math.random()*45);
+	// let num = parseInt(1 + Math.random()*45);
+	document.write("<button>" + num + "</button>");
+	cnt++;
+}
+</script>
+
+</body>
+</html>

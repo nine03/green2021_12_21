@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+var month = parseInt(prompt("월 입력: "));
+// switch문으로 해당 월의 날짜수 출력 
+switch(month) {
+case 2 : day = 28; break;
+case 4 :
+case 6 :
+case 9 :
+case 11: day = 30; break;
+default : day =31; 
+}
+document.write(`${month}월은 ${day}일까지 있다.`);
+</script>
+</body>
+</html>

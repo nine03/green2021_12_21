@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button id="okBtn">OK</button>
+
+<script>
+// DOM : Document Object Model  문서 객체 모델 
+// HTML문서에 있는 태그요소를 객체로 접근하도록 한다.
+// 태그를 참조하는 기술.
+var okBtn = document.getElementById("okBtn");
+console.log(okBtn);
+console.dir(okBtn);
+
+// DOM으로 참조하면 속성을 이용해서 변경 가능.
+okBtn.innerText = "확인";
+okBtn.style.backgroundColor = "yellow";
+
+// 자바스크립트에서는 변수에 함수 저장 가능.
+function fun01(arg){ // fun01은 함수이름 
+	console.log("fun01 함수 선언");
+}
+// 함수 실행 : 함수명 + ();
+// fun01();
+
+// 함수를 변수에 저장.
+var val = fun01;
+
+// 변수를 이용한 함수 실행
+val();
+
+//onclik는 okBtn 안에 있는 속성
+// ()은 바로 실행하는것.
+// 실행후에 결과값을 넣어줘라 
+// okBtn.onclick = fun01;
+
+// 이벤트 핸들러를 익명함수로 사용가능.
+okBtn.onclick = function() {
+	document.write("버튼을 눌렀다!<br>"); // 버튼 누른후에 문구 변경 
+	document.body.bgColor = "yellow"; // 색깔 적용 
+}
+
+</script>
+</body>
+</html>
