@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.comstudy21.saram.SaramMapper">
+  <select id="selectSaram" resultType="org.comstudy21.saram.model.SaramDto">
+    select * from saram where no = #{no}
+  </select>
+  
+  <select id="selectAll" resultType="org.comstudy21.saram.model.SaramDto">
+  	select * from saram
+  </select>
+</mapper>
