@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ajax 연습</h1>
+    <button id="okBtn">확인</button>
+    <div id="resultBox">결과</div>
+
+    <script>
+        // Ajax - 화면의 새로 고침 없이 서버에서 내용을 가져와서 갱신한다.
+        const xhr = new XMLHttpRequest(); // 이객체를 통해 퀴리를 할수있다.
+        //console.dir(xhr);
+
+        var okBtn = document.getElementById("okBtn");
+        var resultBox = document.getElementById("resultBox");
+        
+        // 클릭 이벤트가 발생하면 여기서 처리한다.
+        okBtn.onclick = function() {
+            //alert("버튼 클릭 했습니다!");
+            console.log('클릭하였습니다!');
+            xhr.onreadystatechange = function() { // 콜백함수
+                // 서버에 요청한 이벤트가 발생하면 실행 되는 함수
+               // console.log(this.status, this.readyState); //this는 해당 객체이다.
+               if(this.readyState == 4 && this.status==200 ) {
+                  // console.log(this.responseText);
+                  var data = JSON.parse(this.responseText); // 객체를 만들어준다.
+                  console.dir(this.responseText);
+                  //console.log(data);
+                  //console.dir(data); // dir은 두개를 못찍어준다.
+                 // console.log(data.user, data.message);
+                 var tagData = `<h3> ${data.user} : ${data.message} <h3>`;
+                 resultBox.innerHTML= tagData;
+                 
+                 //console.log(this.responseText);
+                // resultBox.innerHTML = this.responseText;
+               }
+            }
+           
+            // 1.요청 서버의 주소를 등록한다.
+             //xhr.open("GET", "http://localhost:3000/data/HONG/HELLO", true);  // 비동기
+              xhr.open("POST", "http://localhost:3000/input", true);
+             //xhr.open("GET", "http://localhost:3000/home", true);
+
+
+              // POST 요청 시 폼 형태로 header를 변경해야 한다.
+            // xhr.setRequestHeader('Content-type',''); // 헤더를 바꿔줘야한다. 
+            // 순서 중요 : open 후에 header 설정.
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            // 2. 실행한다.
+            //xhr.send();
+             xhr.send('user=KIM&message=Hi');
+        }
+    </script>
+</body>
+</html>
