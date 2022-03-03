@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/underscore@1.13.2/underscore-umd-min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>중고 자동차 목록</h1>
+        <p>
+        <form action="#" id="inputForm">
+            <input type="text" size="10" name="name" value="Sonata" placeholder="차종">
+            <input type="text" size="6" name="price" value="2300" placeholder="가격">
+            <input type="text" size="10" name="company" value="HYUNDAI" placeholder="제조사">
+            <input type="text" size="6" name="year" value="2018" placeholder="연식">
+            <input type="file" name="photo" accept="image/*">
+            <input type="submit" value="저장">
+        </form>
+        </p>
+        <!-- 상세보기 내용이 보여지는 부분 -->
+        <div id="viewTempBox"></div>
+        <!-- 결과 목록이 보여지는 부분 -->
+        <div id="resultBox"></div>
+    </div>
+
+    <!-- SPA를 구현하기 위해 Ajax가 필수 -->
+    <script>
+
+        function showDetail(row) {
+            var no = row.getElementsByTagName("td")[0].innerText;
+            var name = row.getElementsByTagName("td")[1].innerText;
+            var price = row.getElementsByTagName("td")[2].innerText;
+            var company = row.getElementsByTagName("td")[3].innerText;
+            var year = row.getElementsByTagName("td")[4].innerText;
+
+            var rowData = { no, name, price, company, year };
+
+            var compiled = _.template(viewTemp);
+            var html = compiled({ rowData });
+            viewTempBox.innerHTML = html;
+        }
+
+        
+        var viewTemp = `<table border="1" width="550" class="table">
+            <tr align="center">
+                <th>상품번호</th>
+                <td><%-rowData.no%></td>
+                <th>상품명</th>
+                <td><%-rowData.name%></td>
+            </tr>
+            <tr align="center">
+                <th>가격</th>
+                <td><%-rowData.price%></td>
+                <th>제조사</th>
+                <td><%-rowData.company%></td>
+            </tr>
+            <tr align="center">
+                <th>연식</th>
+                <td colspan="3"><%-rowData.year%></td>
+            </tr><tr align="center">
+                <td colspan="3"><img src="<%-rowData.src%>" width="450" height="300"/></td>
+                <td>
+                    <button onclick="delRow(this)">Delete</button>
+                    <button onclick="editRow(this)">Edit</button>
+                </td>
+            </tr>
+        </table>`;
+
+        var _template = `<table width="550" class="table table-hover">
+        <tr>
+            <th width="10%">상품번호</th>
+            <th width="40%">상품명</th>
+            <th width="10%">가격</th>
+            <th  width="30%">제조사</th>
+            <th width="10%">연식</th>
+        </tr>
+    <%
+        for(var i=0; i<carList.length; i++) {
+            var car = carList[i];
+    %>
+        <tr align="center" onclick="showDetail(this)">
+            <td><%-car.no %></td>
+            <td><%-car.name %></td>
+            <td><%-car.price %></td>
+            <td><%-car.company %></td>
+            <td><%-car.year %></td>
+        </tr>
+    <% } %>
+    </table>`;
+
+        var renderList = function (data, status) {
+            if (status == 'success') {
+                var carList = data.carList;
+                var compiled = _.template(_template);
+                var html = compiled({ carList: carList });
+                resultBox.innerHTML = html;
+            }
+        }
+
+        $.get("http://localhost:3000/car/list", renderList);
+
+        const inputForm = document.getElementById("inputForm");
+        inputForm.onsubmit = function () {
+            event.preventDefault();
+            //console.log(this.name.value, this.price.value, this.company.value, this.year.value);
+            if (this.name.value == "") {
+                alert("차종을 입력 하세요!");
+                this.name.focus();
+                return;
+            }
+            if (this.price.value == "") {
+                alert("가격을 입력 하세요!");
+                this.price.focus();
+                return;
+            }
+            if (this.company.value == "") {
+                alert("제조사를 입력 하세요!");
+                this.company.focus();
+                return;
+            }
+            if (this.year.value == "") {
+                alert("연식을 입력 하세요!");
+                this.year.focus();
+                return;
+            }
+
+            var sendData = {
+                name: this.name.value,
+                price: this.price.value,
+                company: this.company.value,
+                year: this.year.value
+            };
+            // 저장 버튼을 누르면 실행 되는 영역
+            var resultBox = document.getElementById('resultBox');
+            $.post("http://localhost:3000/car/input", sendData, renderList);
+        }
+    </script>
+</body>
+
+</html>
