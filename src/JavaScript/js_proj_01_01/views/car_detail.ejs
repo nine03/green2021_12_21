@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자동차 상세 보기</h1>
+    <table border="1" width="550">
+        <tr>
+            <th>번호</th>
+            <td><%=car.no%></td>
+        </tr>
+        <tr>
+            <th>차종</th>
+            <td><%=car.name%></td>
+        </tr>
+        <tr>
+            <th>가격</th>
+            <td><%=car.price%></td>
+        </tr>
+        <tr>
+            <th>메이커</th>
+            <td><%=car.company%></td>
+        </tr>
+        <tr>
+            <th>연식</th>
+            <td><%=car.year%></td>
+        </tr>
+    </table>
+    <a href="/car/modify/<%=car.no%>">수정</a> |
+    <a href="/car/delete/<%=car.no%>">삭제</a> |
+    <a href="/car/list">목록</a>
+</body>
+</html>

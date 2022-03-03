@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자동차 목록</h1>
+    <table width="550" border="1">
+        <tr>
+            <th>NO</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>COMPANY</th>
+            <th>YEAR</th>
+        </tr>
+    <%
+    for(var i=0; i<carList.length; i++) {
+        var car = carList[i];
+    %>
+        <tr>
+            <td><a href="detail?no=<%=car.no%>"><%=car.no%></a></td>
+            <td><a href="detail/<%=car.no%>"><%=car.name%></a></td>
+            <td><%=car.price%></td>
+            <td><%=car.company%></td>
+            <td><%=car.year%></td>
+        </tr>
+    <%
+    }
+    %>
+    </table>
+    <!-- 현재 경로 : localhost:3000/car/list -->
+    <!-- 링크를 누르면 : localhost:3000/car/car_input.html -->
+    <a href="car_input.html">자동차 정보 입력</a>
+</body>
+</html>
