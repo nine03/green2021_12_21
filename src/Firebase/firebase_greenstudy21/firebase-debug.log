@@ -1,0 +1,30 @@
+[debug] [2022-03-04T03:04:08.246Z] ----------------------------------------------------------------------
+[debug] [2022-03-04T03:04:08.247Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2022-03-04T03:04:08.248Z] CLI Version:   10.2.2
+[debug] [2022-03-04T03:04:08.248Z] Platform:      win32
+[debug] [2022-03-04T03:04:08.248Z] Node Version:  v14.16.1
+[debug] [2022-03-04T03:04:08.250Z] Time:          Fri Mar 04 2022 12:04:08 GMT+0900 (대한민국 표준시)
+[debug] [2022-03-04T03:04:08.250Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-04T03:04:08.314Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-04T03:04:08.314Z] > authorizing via signed-in user (yeongjun9110@gmail.com)
+[debug] [2022-03-04T03:04:08.315Z] [iam] checking project greenstudy22-d98ee for permissions ["firebase.projects.get"]
+[debug] [2022-03-04T03:04:08.316Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/greenstudy22-d98ee:testIamPermissions [none]
+[debug] [2022-03-04T03:04:08.317Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/greenstudy22-d98ee:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-04T03:04:09.311Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/greenstudy22-d98ee:testIamPermissions 200
+[debug] [2022-03-04T03:04:09.311Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/greenstudy22-d98ee:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-03-04T03:04:09.312Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee [none]
+[debug] [2022-03-04T03:04:09.911Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee 200
+[debug] [2022-03-04T03:04:09.911Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee {"projectId":"greenstudy22-d98ee","projectNumber":"164405182854","displayName":"greenstudy22","name":"projects/greenstudy22-d98ee","resources":{"hostingSite":"greenstudy22-d98ee","storageBucket":"greenstudy22-d98ee.appspot.com","locationId":"asia-northeast3"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from 'C:\Users\user\eclipse-workspace\YEONGJUN_KIM20211213\JavaScript_workspace\firebase_greenstudy21'...
+[info] 
+[debug] [2022-03-04T03:04:09.913Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/greenstudy22-d98ee/sites 
+[debug] [2022-03-04T03:04:11.147Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/greenstudy22-d98ee/sites 200
+[debug] [2022-03-04T03:04:11.147Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/greenstudy22-d98ee/sites {"sites":[{"name":"projects/164405182854/sites/greenstudy22-d98ee","defaultUrl":"https://greenstudy22-d98ee.web.app","appId":"1:164405182854:web:bfa6e1ada3f6c0c939ec07","type":"DEFAULT_SITE"}]}
+[debug] [2022-03-04T03:04:11.147Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee/webApps/1:164405182854:web:bfa6e1ada3f6c0c939ec07/config [none]
+[debug] [2022-03-04T03:04:12.380Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee/webApps/1:164405182854:web:bfa6e1ada3f6c0c939ec07/config 200
+[debug] [2022-03-04T03:04:12.380Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/greenstudy22-d98ee/webApps/1:164405182854:web:bfa6e1ada3f6c0c939ec07/config {"projectId":"greenstudy22-d98ee","appId":"1:164405182854:web:bfa6e1ada3f6c0c939ec07","storageBucket":"greenstudy22-d98ee.appspot.com","locationId":"asia-northeast3","apiKey":"AIzaSyBfZ9aImxYB8MWN_rvveodqRJVmAVKIGI0","authDomain":"greenstudy22-d98ee.firebaseapp.com","messagingSenderId":"164405182854","measurementId":"G-LMMFDV2RPQ"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[info] i  hosting: 127.0.0.1 - - [04/Mar/2022:03:05:04 +0000] "GET / HTTP/1.1" 200 23593 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [04/Mar/2022:03:05:04 +0000] \"GET / HTTP/1.1\" 200 23593 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36\""}}
