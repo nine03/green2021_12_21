@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to Firebase Hosting</title>
+
+  <script src="/__/firebase/8.9.1/firebase-app.js"></script>
+  <script src="/__/firebase/8.9.1/firebase-auth.js"></script>
+  <script src="/__/firebase/8.9.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/8.9.1/firebase-storage.js"></script>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore-umd-min.js"></script>
+  <style media="screen">
+    body {
+      background: #ECEFF1;
+      color: rgba(0, 0, 0, 0.87);
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #message {
+      background: white;
+      max-width: 550px;
+      margin: 100px auto 16px;
+      padding: 32px 24px;
+      border-radius: 3px;
+    }
+
+    #message h2 {
+      color: #ffa100;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+
+    #message h1 {
+      font-size: 22px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.6);
+      margin: 0 0 16px;
+    }
+
+    #message p {
+      line-height: 140%;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    #message a {
+      display: block;
+      text-align: center;
+      background: #039be5;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      border-radius: 4px;
+    }
+
+    #message,
+    #message a {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="message">
+    <h2>카팔이</h2>
+    <h1>모두의 중고차 카팔이</h1>
+    <div id="load"></div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      var db = firebase.firestore();
+      var storage = firebase.storage();
+      //console.log(db);
+      //console.log(storage);
+      var car = db.collection('car');
+      // console.log(car);
+
+      //list를 만들어줌
+      var carList = []; // 초기화를 시켜준다
+      car.get().then((snapshot) => { // 콜백함수
+        snapshot.forEach((doc) => {
+          carList.push(doc.data());
+        });
+
+        // carList를 모두 로드 후 리스트 생성
+        // 배열의 내용을 load영역에 출력한다.
+        var _template = `<table width="550" class="table table-hover">
+                <tr>
+                    <th width="20%">번호</th>
+                    <th width="30%">상품명</th>
+                    <th width="10%">가격</th>
+                    <th  width="30%">제조사</th>
+                    <th width="10%">연식</th>
+                </tr>
+            <%
+                for(var i=0; i<carList.length; i++) {
+                    var car = carList[i];
+            %>
+                <tr align="center" onclick="showDetail(this)">
+                    <td><%-car.no %></td>
+                    <td><%-car.name %></td>
+                    <td><%-car.price %></td>
+                    <td><%-car.company %></td>
+                    <td><%-car.year %></td>
+                </tr>
+            <% } %>
+            </table>`;
+
+        var compiled = _.template(_template);
+        var html = compiled({ carList: carList });
+        document.getElementById('load').innerHTML = html;
+        //  배열의 내욜을  load영역에 출력한다.
+      }); // end of DOMContentLoaded 
+
+
+
+
+    }); // end of DOMContentLoaded
+     const firebaseConfig = {
+        apiKey: "AIzaSyBfZ9aImxYB8MWN_rvveodqRJVmAVKIGI0",
+        authDomain: "greenstudy22-d98ee.firebaseapp.com",
+        projectId: "greenstudy22-d98ee",
+        storageBucket: "greenstudy22-d98ee.appspot.com",
+        messagingSenderId: "164405182854",
+        appId: "1:164405182854:web:bfa6e1ada3f6c0c939ec07",
+        measurementId: "G-LMMFDV2RPQ"
+      };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+
+</html>
