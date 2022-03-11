@@ -1,7 +1,6 @@
 # green2021_12_21 
 그린 컴퓨터 아카데미 수업 실습용 
 
-
 ### 깃 기본 명령어 정리 
 - 환경설정<br>
 git config --global user.name "nine03" <br>
